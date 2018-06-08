@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Docker Demo</title>
+  <style>
+    html {
+      font-family: monospace;
+    }
+    html, body, #container {
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #container {
+      display: grid;
+      grid-template-columns: 40px 1fr 1fr 40px;
+      grid-template-rows: 40px auto 40px;
+    }
+    .panel {
+      grid-row-start: row2-start;
+      grid-row-end: 3
+    }
+    #panel-input {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+    #panel-list {
+      grid-column-start: 3;
+      grid-column-end: 4;
+    }
+    #list {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 10px;
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div id="panel-input" class="panel">
+      <textarea name="" id="input" cols="30" rows="10"></textarea>
+      <div>
+        <button id="generate-button">Generate</button>
+        <button id="submit-button">Submit</button>
+      </div>
+    </div>
+    <div id="panel-list" class="panel">
+      <ul id="list"></ul>
+      <button id="clear-button">Clear</button>
+    </div>
+  </div>
+  <script src="/index.js"></script>
+</body>
+</html>

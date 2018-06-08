@@ -1,0 +1,21 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Daniel Li <dan@danyll.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.1",
+    "http-server": "^0.11.1",
+    "nodemon": "^1.17.5",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.3"
+  },
+  "scripts": {
+    "build": "rimraf ./dist/ && webpack",
+    "serve": "http-server ./dist/",
+    "watch": "nodemon -e js,html -w src --exec 'yarn run build && yarn run serve'"
+  },
+  "dependencies": {}
+}
