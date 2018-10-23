@@ -3,5 +3,5 @@ WORKDIR /root/
 COPY . .
 RUN ["npm", "install"]
 RUN ["npm", "run", "build"]
-CMD ["npm", "run", "serve"]
+CMD ["node", "/root/node_modules/.bin/http-server" , "./dist/"]
 
