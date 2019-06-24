@@ -10,7 +10,7 @@
     "nodemon": "^1.17.5",
     "rimraf": "^2.6.2",
     "webpack": "^4.11.1",
-    "webpack-cli": "^3.0.3"
+    "webpack-cli": "^3.3.5"
   },
   "scripts": {
     "build": "rimraf ./dist/ && webpack",
